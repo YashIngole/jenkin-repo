@@ -22,6 +22,7 @@ pipeline {
           }
     stage("extract the css template"){
 steps {
+    sh 'rm -rf templatemo_565_onix_digital/assets/css/animated.css'
         sh 'unzip onix-digital.zip'
         sh 'sudo -s'
         sh 'rm /var/www/html/index.html'
