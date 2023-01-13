@@ -3,13 +3,14 @@ pipeline {
     stages {
         stage("install http") {
             steps{
-sh 'sudo yum update'            
-sh 'sudo yum install httpd -y'
-sh 'sudo systemctl start httpd'
-sh 'sudo systemctl enable httpd'
+    echo "configuring http" 
+    sh 'sudo yum update'            
+    sh 'sudo yum install httpd -y'
+    sh 'sudo systemctl start httpd'
+    sh 'sudo systemctl enable httpd'
             }
         }
-    }
+    
     stage("configure css") {
         steps {
 
@@ -31,4 +32,5 @@ steps {
         sh 'curl 18.234.215.130'
         }
     }
+}
 }
