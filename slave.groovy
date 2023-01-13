@@ -24,8 +24,8 @@ pipeline {
 steps {
         sh 'unzip onix-digital.zip'
         sh 'sudo -s'
-        sh 'rm /root/var/www/html/index.html'
-        sh 'cp -R templatemo_565_onix_digital/index.html /root/var/www/html/index.html '
+        sh 'rm /var/www/html/index.html'
+        sh 'cp -R templatemo_565_onix_digital/index.html /var/www/html/index.html '
 }
     }
     stage("curl")
