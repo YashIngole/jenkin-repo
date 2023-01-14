@@ -5,7 +5,7 @@ pipeline {
     stage ("install httpd"){
 steps {
         echo "configuring httpd"
-        sh "sudo yum update"
+        sh "sudo -S yum update -y"
         sh "sudo yum install httpd -y"
         sh "sudo systemctl enable httpd"
         sh "sudo systemctl start httpd"
