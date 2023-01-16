@@ -34,7 +34,7 @@ stage("Push War file to S3 bucket")
        withAWS(credentials: 'yash-aws-creds', region: 'us-east-1')
         {
         sh "aws s3 ls"
-        sh "aws s3 mv /home/ec2-user/workspace/tomcatS3/target/onlinebookstore.war s3://rajudhep/war files/"
+        sh "aws s3 mv /home/ec2-user/workspace/tomcatS3/target/onlinebookstore.war s3://rajudhep/war-files/"
         }
     }
 }
