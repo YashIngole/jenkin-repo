@@ -32,6 +32,7 @@ stage("Push War file to S3 bucket")
 {
     steps {
         echo "pushing war to s3 bucket"
+        WithAWS(credentials: 'ec2-user', region: 'us-east-1')
         sh "aws s3 mv *.war s3://rajudhep/war files/"
     }
 }
