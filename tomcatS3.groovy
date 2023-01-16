@@ -42,6 +42,7 @@ stage("Tomcat configuration")
 {
     steps {
         echo "installing tomcat"
+        sh 'sudo yum install wget -y'
         sh 'wget "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz"'
         sh 'unzip -o apache-tomcat-9.0.55.tar.gz'
         sh 'cd apache-tomcat-9.0.65'
