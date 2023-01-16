@@ -45,9 +45,7 @@ stage("Tomcat configuration")
         sh 'sudo yum install wget -y'
         sh 'wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84.tar.gz'
         sh 'tar -zvxf apache-tomcat-8.5.84.tar.gz'
-        sh 'cd apache-tomcat-8.5.84'
-        sh 'pwd'
-        sh 'cd bin'
+        sh 'cd /home/ec2-user/workspace/tomcatS3/apache-tomcat-8.5.84/bin'
         sh './startup'
 
     }
