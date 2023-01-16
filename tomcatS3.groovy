@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label slave
+    }
 
     stages {
         stage('Getting the project from GIT') {
