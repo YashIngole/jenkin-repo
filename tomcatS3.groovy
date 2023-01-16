@@ -34,7 +34,7 @@ stage("Push War file to S3 bucket")
         echo "pushing war to s3 bucket"
         WithAWS(credentials: 'yash-aws-creds', region: 'us-east-1')
         {
-        sh "aws s3 mv *.war s3://rajudhep/war files/"
+        sh "aws s3 ls"
         }
     }
 }
