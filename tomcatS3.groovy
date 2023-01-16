@@ -31,8 +31,7 @@ pipeline {
 stage("Push War file to S3 bucket")
 {
     steps {
-        echo "pushing war to s3 bucket"
-        WithAWS(credentials: 'yash-aws-creds', region: 'us-east-1')
+       withAWS(credentials: 'yash-aws-creds', region: 'us-east-1')
         {
         sh "aws s3 ls"
         }
